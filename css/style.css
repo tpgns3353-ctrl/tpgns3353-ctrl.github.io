@@ -451,6 +451,46 @@ ul { list-style: none; }
   opacity: 1;
 }
 
+.github-reveal {
+  position: relative;
+}
+
+.reveal-tooltip {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 8px 14px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  font-size: 0.85rem;
+  color: var(--accent-blue);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+  z-index: 10;
+}
+
+.reveal-tooltip::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 8px;
+  height: 8px;
+  background: var(--bg-elevated);
+  border-left: 1px solid var(--border-light);
+  border-top: 1px solid var(--border-light);
+}
+
+.github-reveal:hover .reveal-tooltip {
+  opacity: 1;
+}
+
 /* ===== FOOTER ===== */
 .main-footer {
   margin-top: 40px;
