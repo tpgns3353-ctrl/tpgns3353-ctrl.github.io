@@ -2,12 +2,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('.nav-links li');
   const mainContent = document.querySelector('.main-content');
   const sections = document.querySelectorAll('.section, .featured-banner');
-  const sidebarItems = document.querySelectorAll('.sidebar-item');
 
   function scrollToSection(id) {
     const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (el && mainContent) {
+      const top = el.offsetTop - mainContent.offsetTop;
+      mainContent.scrollTo({ top, behavior: 'smooth' });
     }
   }
 
