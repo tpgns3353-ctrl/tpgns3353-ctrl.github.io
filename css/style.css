@@ -361,8 +361,8 @@ ul { list-style: none; }
 }
 
 .about-avatar {
-  width: 56px;
-  height: 56px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   overflow: hidden;
   flex-shrink: 0;
