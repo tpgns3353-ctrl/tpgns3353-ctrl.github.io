@@ -1,31 +1,46 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const navToggle = document.querySelector('.nav-toggle');
-    const navMenu = document.querySelector('.nav-menu');
+  const navLinks = document.querySelectorAll('.nav-links li');
+  const mainContent = document.querySelector('.main-content');
+  const sections = document.querySelectorAll('.section, .featured-banner');
+  const sidebarItems = document.querySelectorAll('.sidebar-item');
 
-    navToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        navToggle.classList.toggle('active');
+  function scrollToSection(id) {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      const target = link.dataset.target;
+      if (target) {
+        scrollToSection(target);
+      }
+    });
+  });
+
+  function updateActiveNav() {
+    let currentId = '';
+    const scrollTop = mainContent.scrollTop;
+    const offset = 80;
+
+    sections.forEach(section => {
+      const top = section.offsetTop - offset;
+      if (scrollTop >= top) {
+        currentId = section.id;
+      }
     });
 
-    navMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-            navToggle.classList.remove('active');
-        });
+    navLinks.forEach(link => {
+      link.classList.toggle('active', link.dataset.target === currentId);
     });
+  }
 
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        },
-        { threshold: 0.1 }
-    );
+  mainContent.addEventListener('scroll', updateActiveNav);
+  updateActiveNav();
 
-    document.querySelectorAll('.scroll-reveal').forEach(el => {
-        observer.observe(el);
-    });
+  document.querySelector('.nav-logo')?.addEventListener('click', () => {
+    mainContent.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 });

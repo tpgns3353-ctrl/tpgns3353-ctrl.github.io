@@ -1,128 +1,97 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Developer Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%AE%3C/text%3E%3C/svg%3E">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TPGNS — Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">Portfolio</a>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <section id="hero" class="hero">
-        <div class="container">
-            <h1 class="hero-title fade-in">Game Developer</h1>
-            <p class="hero-subtitle fade-in">Unity &amp; C#</p>
-            <p class="hero-desc fade-in">플레이어에게 기억에 남는 경험을 만드는 게임 개발자</p>
-            <div class="hero-buttons fade-in">
-                <a href="#projects" class="btn btn-primary">Projects</a>
-                <a href="https://github.com/tpgns3353-ctrl" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
-            </div>
-        </div>
-    </section>
+  <nav class="top-nav">
+    <div class="nav-logo">
+      <span class="logo-icon">&#9670;</span>
+      <span class="logo-text">TPGNS</span>
+    </div>
+    <ul class="nav-links">
+      <li class="active" data-target="projects">Projects</li>
+      <li data-target="about">About</li>
+      <li data-target="contact">Contact</li>
+    </ul>
+  </nav>
 
-    <section id="about" class="section about">
-        <div class="container">
-            <h2 class="section-title scroll-reveal">About</h2>
-            <p class="about-text scroll-reveal">
-                Unity를 활용한 2D 게임 개발에 집중하고 있습니다.
-                스토리텔링과 픽셀 아트를 결합한 게임을 제작하며,
-                깔끔한 코드와 재사용 가능한 시스템 설계를 지향합니다.
-            </p>
-        </div>
-    </section>
+  <div class="layout">
 
-    <section id="projects" class="section projects">
-        <div class="container">
-            <h2 class="section-title scroll-reveal">Projects</h2>
-            <div class="project-grid">
-                <article class="project-card scroll-reveal">
-                    <div class="project-image">
-                        <div class="project-placeholder">Skelskel</div>
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">Skelskel</h3>
-                        <p class="project-desc">
-                            2D 픽셀 아트 스토리형 액션 게임.
-                            해골이 된 골골이 과거의 기억을 찾아 지옥을 여행하는 이야기.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Unity</span>
-                            <span class="tag">C#</span>
-                            <span class="tag">2D</span>
-                            <span class="tag">Pixel Art</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/tpgns3353-ctrl/GolGol" class="btn btn-sm" target="_blank" rel="noopener">GitHub</a>
-                            <span class="btn btn-sm btn-disabled" title="Coming Soon">Play Web</span>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
+    <aside class="sidebar">
 
-    <section id="skills" class="section skills">
-        <div class="container">
-            <h2 class="section-title scroll-reveal">Skills</h2>
-            <div class="skills-grid scroll-reveal">
-                <div class="skill-card">
-                    <div class="skill-icon">&#x1F3AF;</div>
-                    <h3 class="skill-name">Unity</h3>
-                    <p class="skill-detail">게임 엔진, 에디터 확장, ScriptableObject</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">&#x1F4BB;</div>
-                    <h3 class="skill-name">C#</h3>
-                    <p class="skill-detail">SOLID, DI Container, EventBus 시스템</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">&#x1F3A8;</div>
-                    <h3 class="skill-name">2D Art</h3>
-                    <p class="skill-detail">픽셀 아트, 스프라이트 애니메이션</p>
-                </div>
-            </div>
-        </div>
-    </section>
+      <div class="sidebar-section">
+        <h3 class="sidebar-title">Projects</h3>
+        <ul class="sidebar-list">
+          <li class="sidebar-item active">
+            <span class="item-thumb thumb-soon">?</span>
+            <span class="item-label">Soon...</span>
+          </li>
+        </ul>
+      </div>
 
-    <section id="contact" class="section contact">
-        <div class="container">
-            <h2 class="section-title scroll-reveal">Contact</h2>
-            <div class="contact-links scroll-reveal">
-                <a href="https://github.com/tpgns3353-ctrl" class="contact-link" target="_blank" rel="noopener">
-                    <span class="contact-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-                        </svg>
-                    </span>
-                    <span>GitHub</span>
-                </a>
-            </div>
-        </div>
-    </section>
+      <div class="sidebar-section">
+        <h3 class="sidebar-title">Categories</h3>
+        <ul class="sidebar-list">
+          <li class="sidebar-item cat-tag"><span class="cat-dot dot-action"></span>2D Action</li>
+          <li class="sidebar-item cat-tag"><span class="cat-dot dot-pixel"></span>Pixel Art</li>
+          <li class="sidebar-item cat-tag"><span class="cat-dot dot-story"></span>Story</li>
+        </ul>
+      </div>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&amp;copy; 2026 Portfolio. All rights reserved.</p>
-        </div>
-    </footer>
+      <div class="sidebar-section skills-section">
+        <h3 class="sidebar-title">Skills</h3>
+        <ul class="sidebar-list">
+          <li class="sidebar-item"><span class="skill-badge badge-engine">Unity</span></li>
+          <li class="sidebar-item"><span class="skill-badge badge-lang">C#</span></li>
+          <li class="sidebar-item"><span class="skill-badge badge-art">Pixel Art</span></li>
+          <li class="sidebar-item"><span class="skill-badge badge-arch">SO / DI</span></li>
+        </ul>
+      </div>
 
-    <script src="js/main.js"></script>
+    </aside>
+
+    <main class="main-content">
+
+      <div class="featured-banner" id="projects">
+        <div class="banner-overlay">
+          <span class="banner-tag">In Development</span>
+          <h2 class="banner-title">TPGNS</h2>
+          <p class="banner-desc">프로젝트를 준비 중입니다.</p>
+        </div>
+      </div>
+
+      <section class="section" id="about">
+        <h3 class="section-heading">About</h3>
+        <div class="about-box">
+          <div class="about-avatar">T</div>
+          <div class="about-text">
+            <p>Unity 기반 게임 개발자입니다.</p>
+            <p>2D 액션 · 픽셀 아트에 관심이 있으며,<br>클린 아키텍처(SO/DI)를 지향합니다.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <h3 class="section-heading">Contact</h3>
+        <div class="contact-box">
+          <a href="https://github.com/tpgns3353-ctrl" class="contact-link" target="_blank" rel="noopener">
+            <svg class="contact-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            <span>GitHub</span>
+          </a>
+        </div>
+      </section>
+
+      <div class="main-footer">&copy; 2026 TPGNS. All rights reserved.</div>
+
+    </main>
+
+  </div>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
