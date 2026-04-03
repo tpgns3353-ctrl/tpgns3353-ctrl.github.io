@@ -383,6 +383,26 @@ ul { list-style: none; }
   color: inherit;
 }
 
+/* ===== GAME EMBED ===== */
+.game-embed {
+  position: relative;
+  width: 100%;
+  padding-bottom: 62.5%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  background: var(--bg-surface);
+}
+
+.game-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 /* ===== ABOUT BOX ===== */
 .about-box {
   background: var(--bg-surface);
