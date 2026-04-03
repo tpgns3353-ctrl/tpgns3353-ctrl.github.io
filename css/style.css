@@ -198,6 +198,17 @@ ul { list-style: none; }
   color: var(--text-muted);
 }
 
+.thumb-game {
+  background: linear-gradient(135deg, var(--accent-green), #00cc82);
+  color: #000;
+  font-weight: 800;
+}
+
+.item-label a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .item-label {
   white-space: nowrap;
   overflow: hidden;
@@ -356,6 +367,21 @@ ul { list-style: none; }
 .card-title { font-size: 1rem; font-weight: 700; margin-bottom: 2px; }
 .card-meta { font-size: 0.8rem; color: var(--text-muted); }
 .card-soon .card-title { color: var(--text-muted); }
+
+.thumb-golgol {
+  background: linear-gradient(135deg, #1a2332, #0f2027);
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 8px, rgba(255,255,255,0.02) 8px, rgba(255,255,255,0.02) 9px),
+    repeating-linear-gradient(90deg, transparent, transparent 8px, rgba(255,255,255,0.02) 8px, rgba(255,255,255,0.02) 9px);
+  color: var(--accent-green);
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.project-card {
+  text-decoration: none;
+  color: inherit;
+}
 
 /* ===== ABOUT BOX ===== */
 .about-box {
